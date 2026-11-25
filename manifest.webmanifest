@@ -1,0 +1,11 @@
+{
+  "name": "Bale English - بله انگلیسی",
+  "short_name": "Bale English",
+  "lang": "fa",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f9fc",
+  "theme_color": "#173b68",
+  "description": "یادگیری ساده انگلیسی برای کودکان و بزرگسالان",
+  "icons": []
+}

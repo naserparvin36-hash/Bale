@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0753bd">
+  <meta name="description" content="Bale English - یادگیری ساده انگلیسی برای کودکان و بزرگسالان">
+  <title>Bale English | بله انگلیسی</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Bale English">
+      <span class="brand-mark">ب</span>
+      <span><b>Bale English</b><small>بله انگلیسی</small></span>
+    </a>
+    <div class="top-actions">
+      <button class="sound-toggle" id="soundTest" type="button">🔊 آزمایش صدا</button>
+      <button class="round-action" id="homeButton" type="button" aria-label="خانه">⌂</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">🌟 یادگیری آسان برای همه</span>
+        <h1>انگلیسی را ساده یاد بگیر!</h1>
+        <p>با دوستان کوچولوی ما، حروف و کلمه‌ها را یاد بگیر و مکالمه کن.</p>
+        <button class="primary-btn" data-go="alphabet">شروع یادگیری <span>←</span></button>
+      </div>
+      <div class="hero-picture"><img src="assets/bale-english-hero.jpg" alt="دو کودک و یک سگ بامزه برای یادگیری انگلیسی"></div>
+    </section>
+
+    <section class="home-section" id="homeSection">
+      <div class="welcome-row"><div><span class="eyebrow">به دنیای انگلیسی خوش آمدی</span><h2>امروز چی یاد بگیریم؟</h2></div><span class="welcome-star">⭐</span></div>
+      <div class="home-cards">
+        <button class="home-card blue" data-go="alphabet"><span class="card-art letters-art">A B C</span><strong>حروف الفبا</strong><small>از A تا Z</small><span class="card-start">شروع کنید ←</span></button>
+        <button class="home-card green" data-go="words"><span class="card-art">🍎</span><strong>کلمات و املا</strong><small>تصویر، کلمه و معنی</small><span class="card-start">شروع کنید ←</span></button>
+        <button class="home-card purple" data-go="talk"><span class="card-art">💬</span><strong>مکالمه روزمره</strong><small>Hello! How are you?</small><span class="card-start">شروع کنید ←</span></button>
+        <button class="home-card orange" data-go="practice"><span class="card-art">📝</span><strong>مشق و تمرین</strong><small>با بازی یاد بگیر</small><span class="card-start">شروع کنید ←</span></button>
+      </div>
+    </section>
+
+    <nav class="tabs" id="learning" aria-label="بخش‌های آموزشی">
+      <button class="tab active" data-panel="alphabet">🔤 حروف انگلیسی</button>
+      <button class="tab" data-panel="words">🧩 کلمه و املا</button>
+      <button class="tab" data-panel="talk">💬 مکالمه</button>
+      <button class="tab" data-panel="practice">⭐ تمرین</button>
+    </nav>
+    <section class="panel active" id="alphabet">
+      <div class="section-heading"><div><span class="eyebrow">از A تا Z</span><h2>حروف انگلیسی</h2></div><p>روی هر حرف بزن تا نام و نمونه کلمه را بشنوی.</p></div>
+      <div class="alphabet-grid" id="alphabetGrid"></div>
+      <div class="detail-card" id="letterDetail"><div class="big-letter">A a</div><div class="detail-text"><h3>حرف A</h3><p>نام حرف: اِی</p><p>نمونه: Apple — سیب 🍎</p></div><button class="audio-btn" id="letterSpeak" type="button">🔊 شنیدن</button></div>
+    </section>
+    <section class="panel" id="words">
+      <div class="section-heading"><div><span class="eyebrow">واژه‌های کاربردی</span><h2>کلمه و املا</h2></div><p>تصویر را ببین، کلمه را بخوان و تلفظش را گوش کن.</p></div>
+      <div class="filter-row" id="wordFilters"><button class="filter active" data-category="all">همه</button><button class="filter" data-category="animals">حیوانات</button><button class="filter" data-category="food">خوراکی‌ها</button><button class="filter" data-category="things">وسایل</button></div>
+      <div class="word-grid" id="wordGrid"></div>
+    </section>
+    <section class="panel" id="talk">
+      <div class="section-heading"><div><span class="eyebrow">انگلیسی روزمره</span><h2>مکالمه‌های ساده</h2></div><p>جمله انگلیسی، معنی فارسی و تلفظ صوتی.</p></div>
+      <div class="conversation-list" id="conversationList"></div>
+    </section>
+    <section class="panel" id="practice">
+      <div class="section-heading"><div><span class="eyebrow">یادگیری با تکرار</span><h2>تمرین کوتاه</h2></div><p>معنی درست کلمه انگلیسی را انتخاب کن.</p></div>
+      <div class="quiz-card"><div class="quiz-progress"><span id="questionCount">پرسش ۱</span><span id="score">امتیاز: ۰</span></div><div class="quiz-emoji" id="quizEmoji">🐶</div><h3 id="quizWord">Dog</h3><div class="answers" id="answers"></div><p class="feedback" id="feedback" aria-live="polite">یک پاسخ انتخاب کن.</p><button class="primary-btn" id="nextQuestion" type="button">پرسش بعدی ←</button></div>
+    </section>
+  </main>
+  <footer><b>Bale English · بله انگلیسی</b><span>یادگیری ساده، قدم‌به‌قدم 💙</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
